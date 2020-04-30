@@ -16,6 +16,10 @@ function Reactard({ Component, pageProps }) {
     <AppContext.Provider value={appContext}>
       <Head>
         <title>{_title || "Reactard"} | Reactard</title>
+        <meta
+          name="description"
+          content="Reactard - React makes you not retard."
+        />
       </Head>
       <RootApp>
         <Component {...pageProps} />
