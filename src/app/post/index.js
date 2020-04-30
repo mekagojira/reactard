@@ -1,13 +1,18 @@
 import Post from "./components/Post";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import AppContext from "../shared/context/AppContext";
 import { getBlogPost } from "../../services/contentful";
 
 export default function PostContainer(props) {
   const app = useContext(AppContext);
+  const { data } = props;
 
-  const changeTitle = (name) => {
-    app?.title?.setTitle(name);
+  useEffect(() => {
+    changeTitle();
+  }, [data]);
+
+  const changeTitle = () => {
+    app?.title?.setTitle(data?.title);
   };
 
   return <Post {...props} setTitle={changeTitle} />;
