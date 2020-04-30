@@ -33,7 +33,6 @@ export default async (req, res) => {
     // Set articles change frequencey is weekly
     const articles = await getServerSideProps();
     articles.map((post) => {
-      console.log(post);
       smStream.write({
         url: `/post/${post.slug}`,
         changefreq: EnumChangefreq.WEEKLY,
@@ -49,7 +48,6 @@ export default async (req, res) => {
       throw e;
     });
   } catch (e) {
-    console.log(e);
     res.status(500).end();
   }
 };
