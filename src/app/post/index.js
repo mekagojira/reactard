@@ -5,11 +5,10 @@ import { getBlogPost, getBlogEntries } from "../../services/contentful";
 
 export default function PostContainer(props) {
   const app = useContext(AppContext);
-  const { data } = props;
 
   useEffect(() => {
     changeTitle();
-  }, [data]);
+  }, []);
 
   const changeTitle = () => {
     app?.title?.setTitle(data?.title);
@@ -29,7 +28,7 @@ export const getStaticProps = async (context) => {
 
 export const getStaticPath = async () => {
   const data = await getBlogEntries();
-  console.log(data);
+  
   const paths = data.map((post) => ({
     params: { id: post.id },
   }));
