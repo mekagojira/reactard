@@ -1,5 +1,10 @@
-import React from "react";
+import Header from "./Header";
 
 export default function Root(props) {
-  return <div>{props.children}</div>;
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <Header />
+      <div className="p-6">{props.children}</div>
+    </div>
+  );
 }
