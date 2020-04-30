@@ -1,18 +1,8 @@
-import { useEffect, useState } from "react";
-import { getBlogEntries } from "../../../services/contentful";
+import { useState } from "react";
 import Post from "./Post";
 
 export default function HomePage(props) {
-  const [_posts, _setPosts] = useState([]);
-
-  useEffect(() => {
-    fetchBlog();
-  }, []);
-
-  const fetchBlog = async () => {
-    const data = await getBlogEntries();
-    _setPosts(data);
-  };
+  const [_posts] = useState(props.data || []);
 
   const renderPost = (posts) => {
     return posts.map((post) => {

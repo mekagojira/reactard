@@ -1,3 +1,5 @@
-import HomePageContainer from "../src/app/home-page";
+import HomePageContainer, { getServerSideProps } from "../src/app/home-page";
 
 export default HomePageContainer;
+
+export { getServerSideProps };

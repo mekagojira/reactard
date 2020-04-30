@@ -1,3 +1,5 @@
-import PostContainer from "../../src/app/post";
+import PostContainer, { getServerSideProps } from "../../src/app/post";
 
 export default PostContainer;
+
+export { getServerSideProps };
