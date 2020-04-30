@@ -9,6 +9,7 @@
     "tw": "npx tailwindcss build src/theme/tailwind/config.css -o src/theme/tailwind/index.css"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "contentful": "^7.14.4",
     "dotenv": "^8.2.0",
@@ -16,6 +17,7 @@
     "next": "9.3.6",
     "next-compose-plugins": "^2.2.0",
     "next-transpile-modules": "^3.3.0",
+    "nextjs-sitemap-generator": "^0.5.2",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
