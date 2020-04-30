@@ -1,4 +1,4 @@
-Sitemap: [Sitemap.xml url]
+Sitemap: https://reactard.xyz/api/sitemap.xml
 
 User-agent: *
 Allow: /*
