@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev -p 9889",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "tw": "npx tailwindcss build src/theme/tailwind/config.css -o src/theme/tailwind/index.css"
   },
   "dependencies": {
     "contentful": "^7.14.4",
@@ -13,6 +14,7 @@
     "moment": "^2.24.0",
     "next": "9.3.6",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "tailwindcss": "^1.4.0"
   }
 }

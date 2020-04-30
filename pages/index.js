@@ -1,3 +1,3 @@
-import HomePage from "../src/app/home-page";
+import HomePageContainer from "../src/app/home-page";
 
-export default HomePage;
+export default HomePageContainer;

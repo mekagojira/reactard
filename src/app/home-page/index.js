@@ -1,15 +1,12 @@
-import { useEffect } from "react";
-import { getBlogEntries } from "../../services/contentful";
+import HomePage from "./components/HomePage";
+import AppContext from "../shared/context/AppContext";
+import { useContext, useEffect } from "react";
 
-export default function HomePage() {
+export default function HomePageContainer(props) {
+  const app = useContext(AppContext);
   useEffect(() => {
-    fetchBlog();
+    app.title.setTitle("Trang chủ");
   }, []);
 
-  const fetchBlog = async () => {
-    const data = await getBlogEntries();
-    console.log(data);
-  };
-
-  return <div className="container"></div>;
+  return <HomePage {...props} />;
 }
