@@ -4,7 +4,7 @@ import Article from "../../shared/commons/Article";
 import Link from "next/link";
 import Button from "../../shared/commons/Button";
 export default function Post(props) {
-  const [_post, _setPost] = useState(props?.data);
+  const [_post, _setPost] = useState(props?.data || {});
 
   if (!_post.id) return null;
 

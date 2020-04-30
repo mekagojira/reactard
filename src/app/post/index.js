@@ -8,7 +8,7 @@ export default function PostContainer(props) {
   return (
     <>
       <Head>
-        <title>{props.data.title} - Reactard</title>
+        <title>{props && props.data ? props.data.title : "Reactard"} - Reactard</title>
       </Head>
       <Post {...props} />
     </>
@@ -17,7 +17,7 @@ export default function PostContainer(props) {
 
 export const getStaticProps = async (context) => {
   const postId = context?.params?.id;
-  
+
   if (!postId) return;
   const data = await getBlogPost(postId);
 
@@ -30,6 +30,5 @@ export const getStaticPaths = async () => {
     return { params: { id: post.id } };
   });
 
-  console.log(paths);
   return { paths, fallback: true };
 };
