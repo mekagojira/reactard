@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 export default function Card(props) {
-  const classProps = classNames("rounded overflow-hidden max-w", {
-    "border border-gray-100": props.border,
+  const classProps = classNames("overflow-hidden max-w", {
+    [props.border || "border border-gray-500"]: true,
     [props.shadow || ""]: true,
+    rounded: props.rounded,
   });
 
   return (
@@ -18,6 +19,7 @@ export default function Card(props) {
 
 Card.propTypes = {
   media: PropTypes.object,
-  border: PropTypes.bool,
+  border: PropTypes.string,
+  rounded: PropTypes.bool,
   shadow: PropTypes.string,
 };

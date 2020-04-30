@@ -19,14 +19,14 @@ export default function Post(props) {
   const tags = renderTags();
 
   return (
-    <Card border>
+    <Card border="border-l-4 border-app">
       <Link href={`/post/${post.id}`}>
-        <a className="font-medium text-gray-100 text-xl mb-2">{post.title}</a>
+        <a className="font-medium text-gray-900 text-xl mb-2">{post.title}</a>
       </Link>
       <div className="pt-4">
         <div className="flex flex-wrap">
           {tags}
-          <span className="text-sm text-gray-200">
+          <span className="text-sm text-gray-700">
             <span className="font-bold">{post?.publishedDate}</span>
           </span>
         </div>
