@@ -65,12 +65,17 @@ export const getBlogEntries = async () => {
     });
 };
 
-export const getBlogPost = async (id) => {
-  return client.getEntry(id).then((entry) => {
-    if (entry) {
-      const post = convertPost(entry);
-      return post;
-    }
-    return null;
-  });
+export const getBlogPost = async (search) => {
+  return client
+    .getEntries({
+      content_type: "blogPost",
+      ...search,
+    })
+    .then((entries) => {
+      if (entries && entries.items && entries.items.length > 0) {
+        const blogPosts = entries.items.map((entry) => convertPost(entry));
+        return blogPosts[0];
+      }
+      return null;
+    });
 };

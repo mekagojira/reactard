@@ -8,7 +8,9 @@ export default function PostContainer(props) {
   return (
     <>
       <Head>
-        <title>{props && props.data ? props.data.title : "Reactard"} - Reactard</title>
+        <title>
+          {props && props.data ? props.data.title : "Reactard"} - Reactard
+        </title>
       </Head>
       <Post {...props} />
     </>
@@ -16,10 +18,11 @@ export default function PostContainer(props) {
 }
 
 export const getStaticProps = async (context) => {
-  const postId = context?.params?.id;
+  const slug = context?.params?.slug;
 
-  if (!postId) return;
-  const data = await getBlogPost(postId);
+  if (!slug) return;
+
+  const data = await getBlogPost({ "fields.slug": slug });
 
   return { props: { data: JSON.parse(JSON.stringify(data)) } };
 };
@@ -27,7 +30,7 @@ export const getStaticProps = async (context) => {
 export const getStaticPaths = async () => {
   const data = await getBlogEntries();
   const paths = data.map((post) => {
-    return { params: { id: post.id } };
+    return { params: { slug: post.slug } };
   });
 
   return { paths, fallback: true };
