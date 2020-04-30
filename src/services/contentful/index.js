@@ -42,7 +42,7 @@ const convertPost = (rawData) => {
     id: rawData.sys.id,
     body: rawPost.body,
     description: rawPost.description,
-    publishedDate: moment(rawPost.publishedDate).format("DD MMM YYYY"),
+    publishedDate: moment(rawPost.publishedDate).format("DD-MM-YYYY"),
     slug: rawPost.slug,
     tags: rawPost.tags,
     title: rawPost.title,

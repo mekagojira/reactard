@@ -9,13 +9,11 @@ export default function Post(props) {
 
   return (
     <div>
-      <div className="px-0 md:px-40">
-        <h2 className="font-medium text-gray-800 text-xl mb-2">
+      <div className="px-0 md:px-64">
+        <h2 className="font-medium text-gray-800 text-2xl mb-4">
           {_post.title}
         </h2>
-        <Card border>
-          <Article source={_post.body}></Article>
-        </Card>
+        <Article source={_post.body}></Article>
       </div>
     </div>
   );
