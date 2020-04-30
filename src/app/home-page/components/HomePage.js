@@ -5,6 +5,8 @@ export default function HomePage(props) {
   const [_posts] = useState(props.data || []);
 
   const renderPost = (posts) => {
+    if (!posts) return null;
+
     return posts.map((post) => {
       return (
         <div className="px-0 md:px-40 pb-4" key={post.id}>

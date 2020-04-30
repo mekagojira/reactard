@@ -7,6 +7,8 @@ export default function Post(props) {
   const { post } = props;
 
   const renderTags = () => {
+    if (!post.tags) return null;
+
     return post.tags.map((tag, i) => {
       return (
         <div className="mr-2" key={i}>

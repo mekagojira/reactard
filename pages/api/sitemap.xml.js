@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { SitemapStream, streamToPromise, EnumChangefreq } from "sitemap";
 import { createGzip } from "zlib";
 import { getBlogEntries } from "../../src/services/contentful";
-import moment from "moment";
+
 const getServerSideProps = async () => {
   const data = await getBlogEntries();
 
