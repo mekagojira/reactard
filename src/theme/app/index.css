@@ -3,3 +3,9 @@
   padding: 1rem !important;
   border-radius: 0.25rem;
 }
+
+html {
+  min-height: 100vh;
+  background: #26262b;
+  color: #fff;
+}

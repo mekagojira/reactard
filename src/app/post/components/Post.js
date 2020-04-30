@@ -10,7 +10,7 @@ export default function Post(props) {
   return (
     <div>
       <div className="px-0 md:px-64">
-        <h2 className="font-medium text-gray-800 text-2xl mb-4">
+        <h2 className="font-medium text-gray-100 text-2xl mb-4">
           {_post.title}
         </h2>
         <Article source={_post.body}></Article>

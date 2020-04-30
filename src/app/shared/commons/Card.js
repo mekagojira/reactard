@@ -4,14 +4,14 @@ import classNames from "classnames";
 
 export default function Card(props) {
   const classProps = classNames("rounded overflow-hidden max-w", {
-    "border border-gray-400": props.border,
+    "border border-gray-100": props.border,
     [props.shadow || ""]: true,
   });
 
   return (
     <div className={classProps}>
       {props.media}
-      <div className="px-6 py-4 bg-white">{props.children}</div>
+      <div className="px-6 py-4">{props.children}</div>
     </div>
   );
 }
