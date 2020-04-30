@@ -29,6 +29,4 @@ export default function Post(props) {
   );
 }
 
-Post.propTypes = {
-  setTitle: PropTypes.func.isRequired,
-};
+Post.propTypes = {};

@@ -1,8 +1,8 @@
 import PostContainer, {
   getStaticProps,
-  getStaticPath,
+  getStaticPaths,
 } from "../../src/app/post";
 
 export default PostContainer;
 
-export { getStaticPath, getStaticProps };
+export { getStaticPaths, getStaticProps };

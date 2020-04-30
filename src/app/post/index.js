@@ -10,26 +10,26 @@ export default function PostContainer(props) {
       <Head>
         <title>{props.data.title} - Reactard</title>
       </Head>
-      <Post {...props} setTitle={changeTitle} />
+      <Post {...props} />
     </>
   );
 }
 
 export const getStaticProps = async (context) => {
-  const postId = context?.query?.id;
+  const postId = context?.params?.id;
+  
   if (!postId) return;
-
   const data = await getBlogPost(postId);
 
   return { props: { data: JSON.parse(JSON.stringify(data)) } };
 };
 
-export const getStaticPath = async () => {
+export const getStaticPaths = async () => {
   const data = await getBlogEntries();
+  const paths = data.map((post) => {
+    return { params: { id: post.id } };
+  });
 
-  const paths = data.map((post) => ({
-    params: { id: post.id },
-  }));
-
-  return { paths, fallback: false };
+  console.log(paths);
+  return { paths, fallback: true };
 };
