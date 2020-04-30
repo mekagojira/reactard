@@ -24,7 +24,7 @@ export default function Post(props) {
 
   return (
     <div>
-      <div className="px-48">
+      <div className="px-0 md:px-40">
         <h2 className="font-medium text-gray-800 text-xl mb-2">
           {_post.title}
         </h2>

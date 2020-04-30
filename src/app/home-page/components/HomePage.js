@@ -17,7 +17,7 @@ export default function HomePage(props) {
   const renderPost = (posts) => {
     return posts.map((post) => {
       return (
-        <div className="px-40 pb-4" key={post.id}>
+        <div className="px-0 md:px-40 pb-4" key={post.id}>
           <Post post={post} />
         </div>
       );
@@ -26,5 +26,5 @@ export default function HomePage(props) {
 
   const posts = renderPost(_posts);
 
-  return <div className="px-40">{posts}</div>;
+  return <div className="px-0 md:px-40">{posts}</div>;
 }
