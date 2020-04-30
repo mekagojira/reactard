@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 9889",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "contentful": "^7.14.4",
+    "dotenv": "^8.2.0",
+    "moment": "^2.24.0",
     "next": "9.3.6",
     "react": "16.13.1",
     "react-dom": "16.13.1"
