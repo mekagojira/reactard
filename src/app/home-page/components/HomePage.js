@@ -17,7 +17,7 @@ export default function HomePage(props) {
   const renderPost = (posts) => {
     return posts.map((post) => {
       return (
-        <div className="px-40 pb-4 cursor-pointer" key={post.id}>
+        <div className="px-40 pb-4" key={post.id}>
           <Post post={post} />
         </div>
       );
