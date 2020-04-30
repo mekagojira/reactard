@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Root(props) {
-  return <Root>{props.children}</Root>;
+  return <div>{props.children}</div>;
 }
