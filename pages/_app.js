@@ -1,4 +1,5 @@
 import "../src/theme/tailwind/index.css";
+import "../src/theme/app/index.css";
 import AppContext from "../src/app/shared/context/AppContext";
 import { useState } from "react";
 import Head from "next/head";
