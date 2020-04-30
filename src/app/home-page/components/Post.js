@@ -6,7 +6,10 @@ export default function Post(props) {
   const { post } = props;
 
   return (
-    <Card media={!!post.heroImage && <img src={post?.heroImage?.imageUrl} />}>
+    <Card
+      shadow="shadow"
+      media={!!post.heroImage && <img src={post?.heroImage?.imageUrl} />}
+    >
       <Link href={`/post/${post.id}`}>
         <h2 className="font-medium text-gray-800 text-xl mb-2">{post.title}</h2>
       </Link>
