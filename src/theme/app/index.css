@@ -4,6 +4,20 @@
   border-radius: 0.25rem;
 }
 
+.article p {
+  margin: 1rem 0;
+}
+
+.article h3 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.article h2 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
 html {
   min-height: 100vh;
   background-color: #f7fafc;
