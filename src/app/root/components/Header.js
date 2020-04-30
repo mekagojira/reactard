@@ -5,7 +5,10 @@ export default function Header(props) {
     <nav className="flex items-center justify-between flex-wrap p-6">
       <div className="flex items-center flex-shrink-0 mr-6">
         <Link href="/">
-          <h2 className="text-xl cursor-pointer">Reactard</h2>
+          <a className="flex items-center">
+            <img src="/go.png" className="h-12 mr-2" />
+            <h2 className="text-xl cursor-pointer">REACTARD</h2>
+          </a>
         </Link>
       </div>
       <div className="block lg:hidden"></div>
