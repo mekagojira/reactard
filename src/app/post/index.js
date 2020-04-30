@@ -2,19 +2,17 @@ import Post from "./components/Post";
 import { useContext, useEffect } from "react";
 import AppContext from "../shared/context/AppContext";
 import { getBlogPost, getBlogEntries } from "../../services/contentful";
+import Head from "next/head";
 
 export default function PostContainer(props) {
-  const app = useContext(AppContext);
-
-  useEffect(() => {
-    changeTitle();
-  }, []);
-
-  const changeTitle = () => {
-    app?.title?.setTitle(data?.title);
-  };
-
-  return <Post {...props} setTitle={changeTitle} />;
+  return (
+    <>
+      <Head>
+        <title>{props.data.title} - Reactard</title>
+      </Head>
+      <Post {...props} setTitle={changeTitle} />
+    </>
+  );
 }
 
 export const getStaticProps = async (context) => {
@@ -28,7 +26,7 @@ export const getStaticProps = async (context) => {
 
 export const getStaticPath = async () => {
   const data = await getBlogEntries();
-  
+
   const paths = data.map((post) => ({
     params: { id: post.id },
   }));
