@@ -18,13 +18,14 @@ function Reactard({ Component, pageProps }) {
         <title>{_title || "Reactard"} | Reactard</title>
         <meta
           name="description"
-          content="Reactard - React makes you not retard."
+          content="Reactard - JavaScript and React tips make you not retarded."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="google-site-verification"
           content="67Sj0HSzpjiQuj8OIiseN_E7etso0HrsOx67lymgwKA"
         />
+        <meta http-equiv="content-language" content="vi" />
       </Head>
       <RootApp>
         <Component {...pageProps} />
