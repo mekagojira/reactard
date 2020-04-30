@@ -1,6 +1,9 @@
 require("dotenv").config({
-  path: process.env.NODE_ENV === "prod" ? ".env" : ".env.local",
+  path: process.env.NODE_ENV === "production" ? ".env" : ".env.local",
 });
+
+const withCSS = require("@zeit/next-css");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 const nextConfig = {
   env: {
@@ -9,4 +12,14 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+const withCss = withCSS({
+  webpack(config, options) {
+    config.optimization.minimizer = [];
+    config.optimization.minimizer.push(new OptimizeCSSAssetsPlugin({}));
+
+    return config;
+  },
+  ...nextConfig,
+});
+
+module.exports = withCss;

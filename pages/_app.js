@@ -25,7 +25,7 @@ function Reactard({ Component, pageProps }) {
           name="google-site-verification"
           content="67Sj0HSzpjiQuj8OIiseN_E7etso0HrsOx67lymgwKA"
         />
-        <meta http-equiv="content-language" content="vi" />
+        <meta httpEquiv="content-language" content="vi" />
       </Head>
       <RootApp>
         <Component {...pageProps} />
