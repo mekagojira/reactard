@@ -20,6 +20,7 @@ function Reactard({ Component, pageProps }) {
           name="description"
           content="Reactard - React makes you not retard."
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta
           name="google-site-verification"
           content="67Sj0HSzpjiQuj8OIiseN_E7etso0HrsOx67lymgwKA"
