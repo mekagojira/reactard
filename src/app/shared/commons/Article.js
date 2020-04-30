@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 import ReactMarkdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import {
-  gruvboxDark,
-  agate,
-} from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 const CodeRendered = (props) => {
   return (
-    <SyntaxHighlighter language={props.language || "javascript"} style={agate}>
+    <SyntaxHighlighter
+      language={props.language || "javascript"}
+      style={gruvboxDark}
+    >
       {props.value || props.children}
     </SyntaxHighlighter>
   );
@@ -26,6 +26,9 @@ export default function Article(props) {
             code: CodeRendered,
             inlineCode: CodeRendered,
           }}
+          showLineNumbers
+          wrapLines
+          startingLineNumber={0}
         />
       ) : (
         props.children
