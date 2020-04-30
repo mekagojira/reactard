@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { getBlogPost } from "../../../services/contentful";
 import Card from "../../shared/commons/Card";
-
+import Article from "../../shared/commons/Article";
 export default function Post(props) {
   const [_post, _setPost] = useState({});
   const router = useRouter();
@@ -29,11 +29,7 @@ export default function Post(props) {
           {_post.title}
         </h2>
         <Card border>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: _post.body,
-            }}
-          ></div>
+          <Article source={_post.body}></Article>
         </Card>
       </div>
     </div>

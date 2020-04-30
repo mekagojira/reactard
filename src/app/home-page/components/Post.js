@@ -11,11 +11,11 @@ export default function Post(props) {
       media={!!post.heroImage && <img src={post?.heroImage?.imageUrl} />}
     >
       <Link href={`/post/${post.id}`}>
-        <h2 className="font-medium text-gray-800 text-xl mb-2">{post.title}</h2>
+        <a className="font-medium text-gray-800 text-xl mb-2">{post.title}</a>
       </Link>
-      <p className="text-gray-700 text-base">{post.description}</p>
+      <p className="text-gray-700 text-base italic">{post.description}</p>
       <div className="pt-4">
-        <span className="text-sm text-gray-500 italic">
+        <span className="text-sm text-gray-500">
           bởi <span className="font-bold">{post?.author?.name}</span> lúc{" "}
           <span className="font-bold">{post?.publishedDate}</span>
         </span>
