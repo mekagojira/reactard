@@ -6,7 +6,7 @@ export default function Header(props) {
       <div className="flex items-center flex-shrink-0 mr-6">
         <Link href="/">
           <a className="flex items-center">
-            <img src="/go.png" className="h-12 mr-2" />
+            <img src="/go.png" alt="Reactard" className="h-12 mr-2" />
             <h2 className="text-xl cursor-pointer">Reactard</h2>
           </a>
         </Link>
