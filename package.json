@@ -35,5 +35,8 @@
     "@types/node": "^13.13.4",
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.34"
+  },
+  "browser": {
+    "child_process": false
   }
 }
