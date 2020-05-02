@@ -1,4 +1,4 @@
-import { ContentfulClientApi, createClient } from "contentful";
+import { createClient } from "contentful";
 import moment from "moment";
 
 const client = createClient({
@@ -9,7 +9,7 @@ const client = createClient({
 const convertImage = (rawImage) => {
   if (rawImage) {
     return {
-      imageUrl: rawImage.file.url.replace("//", "http://"), // may need to put null check as well here
+      imageUrl: rawImage.file.url.replace("//", "http://"), 
       description: rawImage.description,
       title: rawImage.title,
     };

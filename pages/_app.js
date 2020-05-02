@@ -20,6 +20,7 @@ function Reactard({ Component, pageProps }) {
           name="description"
           content="Reactard - JavaScript and React tips make you not retarded."
         />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=vietnamese" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="google-site-verification"
