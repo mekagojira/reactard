@@ -14,7 +14,7 @@
     "classnames": "^2.2.6",
     "contentful": "^7.14.4",
     "dotenv": "^8.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "next": "9.3.6",
     "next-compose-plugins": "^2.2.0",
     "next-transpile-modules": "^3.3.0",
